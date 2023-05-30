@@ -40,7 +40,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: $Violet-blue;
+  background: linear-gradient(to bottom, $Light-slate-blue, $Light-royal-blue);
   border-radius: 0 0 2rem 2rem;
 
   span {
@@ -53,12 +53,8 @@ main {
       color: $White;
       height: 6rem;
       width: 6rem;
-      box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
-        rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
-        rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
-        rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
-        rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
-        rgba(0, 0, 0, 0.09) 0px 32px 16px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+        rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
       border-radius: 100px;
       font-size: 3rem;
       padding: 1rem;
@@ -113,7 +109,7 @@ main {
     }
   }
   #s-1 {
-    background-color: rgba(248, 98, 98, 0.226);
+    background-color: rgba(250, 215, 215, 0.226);
     border-radius: 1rem;
 
     .category {
@@ -121,7 +117,7 @@ main {
     }
   }
   #s-2 {
-    background-color: rgba(245, 232, 46, 0.342);
+    background-color: rgba(253, 250, 202, 0.342);
     border-radius: 1rem;
 
     .category {
@@ -129,7 +125,7 @@ main {
     }
   }
   #s-3 {
-    background-color: rgba(126, 243, 216, 0.226);
+    background-color: rgba(208, 253, 243, 0.226);
     border-radius: 1rem;
 
     .category {
@@ -137,7 +133,7 @@ main {
     }
   }
   #s-4 {
-    background-color: rgba(130, 177, 248, 0.226);
+    background-color: rgba(205, 223, 252, 0.226);
     border-radius: 1rem;
 
     .category {
@@ -145,13 +141,45 @@ main {
     }
   }
   button {
+    // margin-top: 1rem;
     width: 100%;
     border: none;
-    padding: 1rem;
+    padding: 1rem 2rem;
     border-radius: 2rem;
     background-color: $Dark-gray-blue;
     color: $White;
     font-size: 1.5rem;
     font-weight: bold;
+    cursor: pointer;
+
+    &:hover {
+      background: linear-gradient(
+        to bottom,
+        $Light-slate-blue,
+        $Light-royal-blue
+      );
+      color: $White;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  main {
+    margin: 0;
+    padding: 0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .result {
+    width: 30%;
+    border-radius: 2rem;
+  }
+  .summery {
+    width: 25%;
+    border-radius: 0 2rem 2rem 0;
+    box-shadow: rgba(179, 177, 255, 0.733) 4px 9px 25px -10px;
   }
 }
